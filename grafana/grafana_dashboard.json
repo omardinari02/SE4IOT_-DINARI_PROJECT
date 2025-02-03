@@ -1,39 +1,38 @@
 {
-    "dashboard": {
-      "id": null,
-      "title": "Precision Farming Dashboard",
-      "panels": [
-        {
-          "type": "graph",
-          "title": "Temperature Trend",
-          "targets": [
-            {
-              "datasource": "InfluxDB",
-              "query": "SELECT mean(temperature) FROM sensor_data WHERE $timeFilter GROUP BY time($__interval)"
-            }
-          ]
-        },
-        {
-          "type": "gauge",
-          "title": "Soil Moisture",
-          "targets": [
-            {
-              "datasource": "InfluxDB",
-              "query": "SELECT last(soil_moisture) FROM sensor_data"
-            }
-          ]
-        },
-        {
-          "type": "graph",
-          "title": "Humidity Levels",
-          "targets": [
-            {
-              "datasource": "InfluxDB",
-              "query": "SELECT mean(humidity) FROM sensor_data WHERE $timeFilter GROUP BY time($__interval)"
-            }
-          ]
-        }
-      ]
-    }
+  "dashboard": {
+    "id": null,
+    "title": "Precision Farming Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Temperature Trend",
+        "targets": [
+          {
+            "datasource": "InfluxDB",
+            "query": "SELECT mean(temperature) FROM sensor_data WHERE $timeFilter GROUP BY time($__interval)"
+          }
+        ]
+      },
+      {
+        "type": "gauge",
+        "title": "Soil Moisture",
+        "targets": [
+          {
+            "datasource": "InfluxDB",
+            "query": "SELECT last(soil_moisture) FROM sensor_data"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Humidity Levels",
+        "targets": [
+          {
+            "datasource": "InfluxDB",
+            "query": "SELECT mean(humidity) FROM sensor_data WHERE $timeFilter GROUP BY time($__interval)"
+          }
+        ]
+      }
+    ]
   }
-  
+}
